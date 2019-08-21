@@ -1,0 +1,7 @@
+<h1>Pick Which Item You Would Like to See More About.</h1>
+<%= link_to 'Create a new topic', new_department_topic_path(@department) %>
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= link_to topic.name, [@department, topic] %></li>
+  <% end %>
+</ul>

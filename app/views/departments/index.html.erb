@@ -1,0 +1,8 @@
+<h1>Click a Department to View Items</h1>
+<%= link_to 'Create a new Item', new_department_path %>
+<ul> 
+  <% @departments.each do |departments| %>
+    <li><%= link_to departments.name, departments %></li>
+  <% end %>
+</ul>
+

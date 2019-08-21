@@ -1,0 +1,16 @@
+def new
+  @department = Department.new
+  render partial: "form"
+end
+
+def edit
+  render partial: "form"
+end
+
+<h1><%= @department.id ? 'Edit Item' : 'Create Item' %></h1>
+<hr />
+<%= form_for @department do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.submit %>
+<% end %>

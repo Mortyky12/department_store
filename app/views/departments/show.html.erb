@@ -1,0 +1,9 @@
+<h1><%= @department.name %></h1>
+<hr />
+<p>What would you like to do?</p>
+<%= link_to 'View Items', department_topics_path(@department) %>
+<br />
+<%= link_to 'Create Items', edit_department_path(@department) %>
+<br />
+<%= link_to 'Delete Items', @department, method: :delete %>
+
